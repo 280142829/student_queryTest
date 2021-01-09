@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.Dao">
+	<insert id="add" parameterType="user">
+		<selectKey   resultType="int" keyProperty="id">
+		  SELECT LAST_INSERT_ID() 
+		</selectKey>
+		INSERT INTO USER
+		(name,gender,age,address,qq,email)VALUES(name,gender,age,address,qq,email)
+
+	</insert>
+	
+	<select id="findAll" resultType="user" ></select>
+
+</mapper>
+ 
